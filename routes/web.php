@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\HomersekletController;
+use App\Http\Controllers\HomersekletController;
 
 Route::get('/', function () {
     return view('welcome');
