@@ -15,8 +15,11 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-4">
-
+            <div class="col-4 bg-dark text-white">
+                <ul>
+                    <li>Főoldal</li>
+                    <li>Hőmérséklet</li>
+                </ul>
             </div>
             <div class="col-8">
                 @yield('content')
