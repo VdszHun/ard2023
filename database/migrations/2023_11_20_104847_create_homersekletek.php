@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('homersekletek', function (Blueprint $table) {
             $table->id("h_id");
             $table->float('hofok',4,2);
+            $table->integer('paratartalom');
+            $table->dateTime('meres_ideje');
         });
     }
 
