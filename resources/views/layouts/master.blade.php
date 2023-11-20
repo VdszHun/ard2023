@@ -17,8 +17,12 @@
         <div class="row">
             <div class="col-4 bg-dark text-white">
                 <ul>
-                    <li>Főoldal</li>
-                    <li>Hőmérséklet</li>
+                    <li>
+                        <a href="{{route('fooldal')}}">Főoldal</a>
+                    </li>
+                    <li>
+                        <a href="{{route('homerseklet')}}">Hőmérséklet&Páratartalom</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-8">
