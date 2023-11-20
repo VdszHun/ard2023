@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Homerseklet;
+use Illuminate\Support\Facades\Validator;
 
 class HomersekletController extends Controller
 {
@@ -14,14 +15,14 @@ class HomersekletController extends Controller
 
     //API
     public function create(Request $req){
-        $validalas = $Validator::make(
+        $validalas = Validator::make(
             $req->all(),
             [
-                "homerseklet" => "required"
+                "homerseklet" => "required",
                 "paratartalom" => "required"
             ],
             [
-                "homerseklet.required" => "Hiányzó hőmérséklet"
+                "homerseklet.required" => "Hiányzó hőmérséklet",
                 "paratartalom.required" => "Hiányzó páratartalom"
             ]
         );
@@ -32,7 +33,7 @@ class HomersekletController extends Controller
         }else{
             //Adatbázisba szúrni az adatokat
             $homerseklet = new Homerseklet;
-            $homerseklet->hofok = $req->input('homerseklet')
+            $homerseklet->hofok = $req->input('homerseklet');
             $homerseklet->paratartalom = $req->input('paratartalom');
             $homerseklet->meres_ideje = date('Y-m-d H:i:s');
             $homerseklet->save();
