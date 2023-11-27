@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomersekletController;
+use App\Http\Controllers\LegminosegController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,4 +10,4 @@ Route::get('/', function () {
 
 Route::get('/homerseklet',[HomersekletController::class,'index'])->name('homerseklet');
 
-Route::get('/legminoseg',[HomersekletController::class,'index'])->name('legminoseg');
+Route::get('/legminoseg',[LegminosegController::class,'index'])->name('legminoseg');

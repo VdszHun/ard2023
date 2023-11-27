@@ -14,7 +14,7 @@ class LegminosegController extends Controller
     }
 
     //API
-    public function create(Request $req){
+    public function legcreate(Request $req){
         $legvalidalas = Validator::make(
             $req->all(),
             [
