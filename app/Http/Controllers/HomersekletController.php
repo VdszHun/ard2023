@@ -22,8 +22,8 @@ class HomersekletController extends Controller
                 "paratartalom" => "required"
             ],
             [
-                "homerseklet.required" => "Hiányzó hőmérséklet",
-                "paratartalom.required" => "Hiányzó páratartalom"
+                "homerseklet.required" => "Hiányzó hőmérséklet!",
+                "paratartalom.required" => "Hiányzó páratartalom!"
             ]
         );
         if($validalas->fails()){

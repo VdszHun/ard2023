@@ -3,30 +3,27 @@
 @section('content')
 
 <div>
-    <h1>Hőmérsékletek</h1>
+    <h1>Távolság</h1>
 
     <div class="table-responsive">
         <table class="table table-primary table-stripped table-hover">
             <tr>
                 <th>Id</th>
-                <th>Hőmérséklet</th>
-                <th>Páratartalom</th>
+                <th>Távolság</th>
                 <th>Mérés ideje</th>
             </tr>
-            @foreach ($homersekletek as $hom)
+            @foreach ($tavolsagok as $tav)
             <tr>
-                <td>{{$hom->h_id}}</td>
-                <td>{{$hom->hofok}} &deg;C</td>
-                <td>{{$hom->paratartalom}}%</td>
-                <td>{{$hom->meres_ideje}}</td>
+                <td>{{$tav->t_id}}</td>
+                <td>{{$tav->tavolsag}} cm</td>
+                <td>{{$tav->tavmeres_ideje}}</td>
             </tr>
             @endforeach
 
         </table>
 
-        {{$homersekletek->links() }}
+        {{$tavolsagok->links() }}
     </div>
 </div>
 
 @endsection
-

@@ -26,6 +26,9 @@
                     <li>
                         <a href="{{route('legminoseg')}}">Légminőség</a>
                     </li>
+                    <li>
+                        <a href="{{route('tavolsag')}}">Távolság</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-8">

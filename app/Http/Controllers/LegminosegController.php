@@ -21,7 +21,7 @@ class LegminosegController extends Controller
                 "legminoseg" => "required",
             ],
             [
-                "legminoseg.required" => "Hiányzó légminőség",
+                "legminoseg.required" => "Hiányzó légminőség!",
             ]
         );
         if($legvalidalas->fails()){

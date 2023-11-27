@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomersekletController;
 use App\Http\Controllers\LegminosegController;
+use App\Http\Controllers\TavolsagController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,3 +12,5 @@ Route::get('/', function () {
 Route::get('/homerseklet',[HomersekletController::class,'index'])->name('homerseklet');
 
 Route::get('/legminoseg',[LegminosegController::class,'index'])->name('legminoseg');
+
+Route::get('/tavolsag',[TavolsagController::class,'index'])->name('tavolsag');
