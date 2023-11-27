@@ -8,3 +8,5 @@ Route::get('/', function () {
 })->name("fooldal");
 
 Route::get('/homerseklet',[HomersekletController::class,'index'])->name('homerseklet');
+
+Route::get('/legminoseg',[HomersekletController::class,'index'])->name('legminoseg');
