@@ -19,9 +19,8 @@ class RiasztoController extends Controller
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
         $data = [
-            "red" => $req->input('red'),
-            "green" => $req->input('green'),
-            "blue" => $req->input('blue'),   
+            "on" => $req->input('on'),
+            "off" => $req->input('off'),
         ];
         curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
 

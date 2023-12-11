@@ -10,15 +10,12 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-6">
-                        <button class="btn btn-warning w-100 my-3" onclick="riasztoKapcsolas;">Bekapcsolás</button>
+                        <button class="btn btn-warning w-100 my-3" onclick="riasztoKapcsolas(on);">Bekapcsolás</button>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-dark w-100 my-3">Kikapcsolás</button>
+                        <button class="btn btn-dark w-100 my-3" onclick="riasztoKapcsolas(off);">Kikapcsolás</button>
                     </div>    
                 </div>
-            </div>
-            <div class="col-6">
-                <div></div>
             </div>
         </div>
     </div>
@@ -26,11 +23,11 @@
 </div>
 
 <script>
-    function riasztoKapcsolas{
+    function riasztoKapcsolas(on,off){
         $.ajax({
             url: "riasztosenddata",
             method: 'POST',
-            data:{},
+            data:{on:1,off:0},
             headers:{
                 'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
             },
