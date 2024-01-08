@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Riaszto;
-use Illuminate\Support\Facades\Validator;
 
 class RiasztoController extends Controller
 {
@@ -12,15 +10,14 @@ class RiasztoController extends Controller
         return view('riaszto');
     }
 
-    public function riasztosenddata(Request $req){
+    public function alertsenddata(Request $req){
         $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,"http://192.168.12.2/riasztokapcsolas");
+        curl_setopt($ch,CURLOPT_URL,"http://192.168.12.2/riasztas");
         curl_setopt($ch,CURLOPT_POST,1);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
         $data = [
-            "on" => $req->input('on'),
-            "off" => $req->input('off'),
+            "allapot" => $req->input('allapot')  
         ];
         curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
 
@@ -30,4 +27,5 @@ class RiasztoController extends Controller
 
         return response()->json($response);
     }
+
 }

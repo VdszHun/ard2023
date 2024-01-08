@@ -17,3 +17,4 @@ Route::get('/legminoseg',[LegminosegController::class,'index'])->name('legminose
 Route::get('/tavolsag',[TavolsagController::class,'index'])->name('tavolsag');
 
 Route::get('/riaszto',[RiasztoController::class,'index'])->name('riaszto');
+Route::post('/alertsenddata',[RiasztoController::class,'alertsenddata']);
